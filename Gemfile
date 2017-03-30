@@ -30,6 +30,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'sqlite3'
+  gem 'coveralls'
 end
 
 group :development do
