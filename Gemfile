@@ -10,6 +10,14 @@ gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 gem 'puma', '~> 3.0'
 gem 'figaro'
+gem 'devise', '> 4.x'
+gem 'activeadmin', github: 'activeadmin'
+gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'kaminari', github: 'amatsuda/kaminari', branch: '0-17-stable'
+gem 'formtastic', github: 'justinfrench/formtastic'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
+gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -28,9 +36,12 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'database_cleaner'
   gem 'ffaker'
   gem 'sqlite3'
   gem 'coveralls'
+  gem 'capybara'
 end
 
 group :development do
