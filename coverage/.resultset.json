@@ -1,38 +1,121 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/benstein/Desktop/Git/datespot_backend/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/benstein/Desktop/Git/datespot_backend/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/controllers/application_controller.rb": [
-        0,
-        0
+        1,
+        null
       ],
-      "/Users/benstein/Desktop/Git/datespot_backend/app/jobs/application_job.rb": [
+      "/Users/benstein/Desktop/Git/datespot_backend/app/models/admin_user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/admin/admin_user.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
         0,
-        0
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/admin/dashboard.rb": [
+        1,
+        null,
+        5,
+        null,
+        5,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/models/user.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/models/datespot.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
       ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/mailers/application_mailer.rb": [
         0,
         0,
         0,
         0
-      ],
-      "/Users/benstein/Desktop/Git/datespot_backend/app/models/application_record.rb": [
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1490915499
+    "timestamp": 1491227253
   }
 }
