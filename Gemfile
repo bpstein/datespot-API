@@ -42,6 +42,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'coveralls'
   gem 'capybara'
+  gem 'rails-controller-testing'
 end
 
 group :development do

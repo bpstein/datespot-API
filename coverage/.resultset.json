@@ -1,6 +1,22 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/benstein/Desktop/Git/datespot_backend/app/helpers/application_helper.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/helpers/category_options.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/controllers/application_controller.rb": [
         1,
         null
@@ -38,12 +54,12 @@
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         null,
-        0,
+        1,
         null,
         null,
         null
@@ -51,7 +67,7 @@
       "/Users/benstein/Desktop/Git/datespot_backend/app/admin/dashboard.rb": [
         1,
         null,
-        5,
+        8,
         null,
         5,
         2,
@@ -81,6 +97,43 @@
         null,
         null,
         null,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/admin/datespot.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/models/datespot.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/models/user.rb": [
@@ -100,15 +153,6 @@
         null,
         null
       ],
-      "/Users/benstein/Desktop/Git/datespot_backend/app/models/datespot.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -116,6 +160,6 @@
         0
       ]
     },
-    "timestamp": 1491227253
+    "timestamp": 1491236935
   }
 }
