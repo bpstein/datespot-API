@@ -3,21 +3,20 @@
     "coverage": {
       "/Users/benstein/Desktop/Git/datespot_backend/app/helpers/application_helper.rb": [
         1,
-        1,
-        null
-      ],
-      "/Users/benstein/Desktop/Git/datespot_backend/app/helpers/category_options.rb": [
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        0,
-        null,
         null
       ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/models/category.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/models/application_record.rb": [
+        1,
         1,
         null
       ],
@@ -27,11 +26,6 @@
         null,
         1,
         null,
-        null
-      ],
-      "/Users/benstein/Desktop/Git/datespot_backend/app/models/application_record.rb": [
-        1,
-        1,
         null
       ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/admin/admin_user.rb": [
@@ -64,10 +58,28 @@
         null,
         null
       ],
+      "/Users/benstein/Desktop/Git/datespot_backend/app/admin/category.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null
+      ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/admin/dashboard.rb": [
         1,
         null,
-        8,
+        9,
         null,
         5,
         2,
@@ -134,6 +146,42 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/benstein/Desktop/Git/datespot_backend/app/models/user.rb": [
@@ -160,6 +208,6 @@
         0
       ]
     },
-    "timestamp": 1491236935
+    "timestamp": 1491330391
   }
 }

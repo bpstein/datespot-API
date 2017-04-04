@@ -1,5 +1,5 @@
 ActiveAdmin.register Datespot do
-  permit_params :name, :short_description, :long_description, :location, :price_range, :category
+  permit_params :name, :short_description, :long_description, :location, :price_range, :category_id
 
   show do |t|
     attributes_table do

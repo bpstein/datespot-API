@@ -13,7 +13,16 @@ RSpec.describe Admin::DatespotsController, type: :controller do
 
   describe '#index' do 
     it 'renders the index' do 
-      FactoryGirl.create :datespot 
+      category = Category.create! name: 'just drinks'
+      datespot = Datespot.create! name: 'Drinking Hole', 
+                                  short_description: 'Nice place by river', 
+                                  long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', 
+                                  location: 'Greenwich', 
+                                  price_range: 10, 
+                                  website: 'drinkinghole.com',
+                                  start_date: '09 Apr 2017',
+                                  end_date: '10 May 2017',
+                                  category: category
       get :index 
       expect(response).to have_http_status(:success)
     end
@@ -21,7 +30,16 @@ RSpec.describe Admin::DatespotsController, type: :controller do
 
   describe '#edit' do 
     it 'renders datespot form' do 
-      datespot = Datespot.create! name: 'Drinking Hole', short_description: 'Nice place by river', long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', location: 'Greenwich', price_range: 10, category: 'just drinks'
+      category = Category.create! name: 'just drinks'
+      datespot = Datespot.create! name: 'Drinking Hole', 
+                                  short_description: 'Nice place by river', 
+                                  long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', 
+                                  location: 'Greenwich', 
+                                  price_range: 10, 
+                                  website: 'drinkinghole.com',
+                                  start_date: '09 Apr 2017',
+                                  end_date: '10 May 2017',
+                                  category: category
       get :edit, params: { id: 1 }
       expect(assigns(:datespot)).to eq datespot
     end
@@ -29,7 +47,16 @@ RSpec.describe Admin::DatespotsController, type: :controller do
 
   describe '#update' do 
     it 'updates a datespot and relevant info' do 
-      @datespot = Datespot.create! name: 'Hole in the Wall', short_description: 'Nondescript hole', long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', location: 'Greenwich', price_range: 10, category: 'just drinks'
+      category = Category.create! name: 'just drinks'
+      @datespot = Datespot.create! name: 'Hole in the Wall', 
+                                   short_description: 'Nondescript hole', 
+                                   long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', 
+                                   location: 'Greenwich', 
+                                   price_range: 10, 
+                                   website: 'hole.com',
+                                   start_date: '27 Sep 2017',
+                                   end_date: '30 Dec 2018',
+                                   category: category
       patch :update, params: { id: @datespot,
         datespot: FactoryGirl.attributes_for(
           :datespot, 
