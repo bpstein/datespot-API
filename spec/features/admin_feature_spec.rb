@@ -2,10 +2,10 @@ require 'rails_helper'
 require 'database_cleaner'
 
 feature "Guests cannot access dashboard" do 
-  context 'Guests cannot create projects' do
+  context 'Guests cannot create datespots' do
     it "does not allow guest access" do 
       visit('/admin')
-      expect(page).to_not have_link 'New Post'
+      expect(page).to_not have_link 'New Datespot'
     end
   end
 end
@@ -32,10 +32,23 @@ feature "User can access the admin dashboard" do
     end
   end
 
-  context "User can add valid projects and tasks via dashboard" do 
+  context "User can add valid datespots and categories via dashboard" do 
     before do
       admin_user = FactoryGirl.create :admin_user
       sign_in_admin
+    end
+
+    it 'should not allow a blank datespot to be added' do
+      visit ('/admin/datespots/new')
+      click_button('Create Datespot')
+      expect(page).to have_content("can't be blank")
+    end
+
+    it 'should allow an admin to add a datespot' do 
+      visit ('/admin/datespots/new')
+      click_button('Create Datespot')
+      add_datespot
+      expect(page).to have_content("Datespot added!")
     end
   end
 end

@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable 
 
+  has_many :categories
+  has_many :datespots, through: :categories
   validates :name, presence: true, length: { maximum: 25 }
 
   def email_verified?
