@@ -1,56 +1,43 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', github: "rails/rails", branch: "5-0-stable"
-gem 'pg', group: :production
-gem 'rails_12factor', group: :production
-gem 'puma', '~> 3.0'
-gem 'figaro'
-gem 'devise', '> 4.x'
 gem 'activeadmin', github: 'activeadmin'
-gem 'ransack', github: 'activerecord-hackery/ransack'
-gem 'kaminari', github: 'amatsuda/kaminari', branch: '0-17-stable'
-gem 'formtastic', github: 'justinfrench/formtastic'
-gem 'draper', github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
 gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+gem 'devise'
+gem 'draper', github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
+gem 'figaro'
+gem 'formtastic', github: 'justinfrench/formtastic'
+gem 'kaminari', github: 'amatsuda/kaminari', branch: '0-17-stable'
+gem 'puma'
+gem 'rails'
+gem 'ransack', github: 'activerecord-hackery/ransack'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'shoulda-matchers', '~> 3.1'
-  gem 'database_cleaner'
-  gem 'ffaker'
-  gem 'sqlite3'
-  gem 'coveralls'
   gem 'capybara'
+  gem 'coveralls'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
   gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'sqlite3'
 end
 
 group :development do
   gem 'listen', '~> 3.0.5'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
