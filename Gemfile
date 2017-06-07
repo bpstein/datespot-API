@@ -8,7 +8,6 @@ end
 gem 'activeadmin', github: 'activeadmin'
 gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
 gem 'devise'
-gem 'draper', github: 'audionerd/draper', branch: 'rails5', ref: 'e816e0e587'
 gem 'figaro'
 gem 'formtastic', github: 'justinfrench/formtastic'
 gem 'kaminari', github: 'amatsuda/kaminari', branch: '0-17-stable'

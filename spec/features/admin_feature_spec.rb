@@ -1,54 +1,63 @@
 require 'rails_helper'
-require 'database_cleaner'
 
-feature "Guests cannot access dashboard" do 
+feature 'Guests cannot access dashboard' do
   context 'Guests cannot create datespots' do
-    it "does not allow guest access" do 
+    it 'does not allow guest access' do
       visit('/admin')
       expect(page).to_not have_link 'New Datespot'
     end
   end
 end
 
-feature "User can access the admin dashboard" do 
-  let(:admin_user) {FactoryGirl.create :admin_user}
+feature 'User can access the admin dashboard' do
+  let(:admin_user) { FactoryGirl.create :admin_user }
 
-  context "User can view the admin dashboard " do 
-    before do 
-      admin_user = FactoryGirl.create :admin_user
+  context 'User can view the admin dashboard ' do
+    before do
+      create :admin_user
       sign_in_admin
     end
 
-    it 'renders without fail' do 
+    it 'renders without fail' do
       visit '/admin/admin_users'
       expect(page).to have_content('Dashboard')
       expect(page).to have_content('admin@example.com')
     end
 
-    it "should display a list of admin users" do 
+    it 'should display a list of admin users' do
       visit('/admin/admin_users')
       expect(page).to have_content('Admin Users')
       expect(page).to have_content('admin@example.com')
     end
   end
 
-  context "User can add valid datespots and categories via dashboard" do 
+  context 'User can add valid datespots and categories via dashboard' do
     before do
-      admin_user = FactoryGirl.create :admin_user
+      create :admin_user
       sign_in_admin
     end
 
     it 'should not allow a blank datespot to be added' do
-      visit ('/admin/datespots/new')
+      visit '/admin/datespots/new'
       click_button('Create Datespot')
       expect(page).to have_content("can't be blank")
     end
 
-    it 'should allow an admin to add a datespot' do 
-      visit ('/admin/datespots/new')
-      click_button('Create Datespot')
-      add_datespot
-      expect(page).to have_content("Datespot added!")
+    it 'should allow an admin to add a datespot' do
+      visit '/admin/datespots/new'
+
+      fill_in 'Name', with: 'The Local'
+      fill_in 'Short description', with: 'Not a bad joint'
+      fill_in 'Location', with: 'South London'
+      fill_in 'Website', with: 'www.local.co.uk'
+      fill_in 'Price range', with: 3
+
+      page.find('#datespot_start_date_input').set('2017-01-01')
+      page.find('#datespot_end_date_input').set('2020-01-01')
+
+      click_button 'Create Datespot'
+
+      expect(page).to have_content('Datespot added!')
     end
   end
 end
