@@ -2,6 +2,7 @@ require 'rails_helper'
 Devise::Test::ControllerHelpers
 
 RSpec.describe Admin::AdminUsersController, type: :controller do 
+  
   render_views 
   let(:admin_user) { FactoryGirl.create :admin_user }
 
