@@ -4,7 +4,7 @@ require 'rails_helper'
 describe "AdminPages" do
   describe "GET /admin_pages" do
     before do
-      admin_user = FactoryGirl.create(:admin_user)
+      admin_user = FactoryBot.create(:admin_user)
       path = path.singularize
       sign_in_admin
     end

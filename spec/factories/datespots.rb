@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :datespot do
     name 'Sexy Bar'
     short_description 'A nice place to take a sexy date.'

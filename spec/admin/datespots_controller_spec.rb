@@ -4,7 +4,7 @@ Devise::Test::ControllerHelpers
 RSpec.describe Admin::DatespotsController, type: :controller do 
 
   render_views
-  let(:admin_user) { FactoryGirl.create :admin_user }
+  let(:admin_user) { FactoryBot.create :admin_user }
 
   before(:each) do 
     DatabaseCleaner.clean 
@@ -100,7 +100,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
                                     sun_open: '11:00',
                                     sun_close: '22:00'
       patch :update, params: { id: @datespot,
-        datespot: FactoryGirl.attributes_for(
+        datespot: FactoryBot.attributes_for(
           :datespot, 
           name: 'New Joint',
           short_description: 'Dive Bar',
