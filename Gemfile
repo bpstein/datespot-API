@@ -17,6 +17,7 @@ gem 'kaminari'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 2.7.2'
 gem 'jquery-rails'
+gem 'coffee-rails'
 
 group :production do
   gem 'pg'
