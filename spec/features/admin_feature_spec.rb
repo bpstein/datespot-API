@@ -32,7 +32,7 @@ feature 'User can access the admin dashboard' do
   end
 end
 
-feature 'User can add datespots' do 
+feature 'User can add datespots' do
   let(:admin_user) { FactoryBot.create :admin_user }
 
   context 'User can add valid datespots and categories via dashboard' do
@@ -41,7 +41,7 @@ feature 'User can add datespots' do
       sign_in_admin
     end
 
-    it 'should allow an admin to add a category' do 
+    it 'should allow an admin to add a category' do
       create_category
       expect(page).to have_content('Category was successfully created.')
     end
@@ -63,7 +63,7 @@ feature 'User can add datespots' do
       fill_in 'Website', with: 'www.local.co.uk'
       fill_in 'Price range', with: 3
 
-      page.find_field('Category').set('first date') 
+      page.find_field('Category').set('first date')
       page.find('#datespot_start_date_input').set('2017-01-01')
       page.find('#datespot_end_date_input').set('2020-01-01')
 

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Datespot, type: :model do
-
   before(:each) do 
     DatabaseCleaner.clean
     create :category
@@ -36,8 +35,6 @@ RSpec.describe Datespot, type: :model do
   it { should validate_presence_of(:sat_close) }
   it { should validate_presence_of(:sun_open) }
   it { should validate_presence_of(:sun_close) }
-
- 
 
   it 'creates a datespot with valid input' do
     expect { create :datespot }.to change { Datespot.count }.by(1)

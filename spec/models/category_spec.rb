@@ -1,8 +1,7 @@
 require 'rails_helper' 
 
 RSpec.describe Category, type: :model do
-
-  before(:each) do 
+  before(:each) do
     DatabaseCleaner.clean
     create :category
   end
@@ -13,5 +12,3 @@ RSpec.describe Category, type: :model do
     expect { create :category }.to change { Category.count }.by(1)
   end
 end
-  
-
