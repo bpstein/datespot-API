@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'rails_helper'
 
-describe "AdminPages" do
+describe 'AdminPages' do
   describe "GET /admin_pages" do
     before do
       admin_user = FactoryBot.create(:admin_user)
