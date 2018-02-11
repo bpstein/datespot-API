@@ -6,4 +6,10 @@ module WebHelper
     fill_in 'Password', with: password
     click_button 'Login'
   end
+
+  def create_category
+    visit '/admin/categories/new'
+    fill_in 'Name', with: 'first date'
+    click_button 'Create Category'
+  end
 end

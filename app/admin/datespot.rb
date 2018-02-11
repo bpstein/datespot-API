@@ -1,5 +1,27 @@
 ActiveAdmin.register Datespot do
-  permit_params :name, :short_description, :long_description, :location, :price_range, :category_id
+  permit_params :name, 
+                :short_description, 
+                :long_description, 
+                :location, 
+                :price_range, 
+                :category_id,
+                :website,
+                :start_date,
+                :end_date, 
+                :mon_open,
+                :mon_close,
+                :tue_open,
+                :tue_close,
+                :wed_open,
+                :wed_close,
+                :thu_open,
+                :thu_close,
+                :fri_open,
+                :fri_close, 
+                :sat_open, 
+                :sat_close, 
+                :sun_open, 
+                :sun_close
 
   show do |t|
     attributes_table do
