@@ -104,6 +104,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+    codacy-coverage (1.1.8)
+      simplecov
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -336,6 +338,7 @@ DEPENDENCIES
   activemodel-serializers-xml!
   byebug
   capybara
+  codacy-coverage
   coffee-rails
   coveralls
   database_cleaner

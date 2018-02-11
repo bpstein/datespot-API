@@ -18,8 +18,10 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 ENV['RAILS_ENV'] ||= 'test'
 
-require 'coveralls'
+require 'codacy-coverage'
+Codacy::Reporter.start
 
+require 'coveralls'
 Coveralls.wear!('rails')
 
 RSpec.configure do |config|
