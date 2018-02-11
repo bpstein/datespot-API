@@ -27,7 +27,7 @@ end
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara'
-  gem 'codacy-coverage', :require => false
+  gem 'codacy-coverage', require: false
   gem 'coveralls'
   gem 'database_cleaner'
   gem 'factory_bot_rails'

@@ -36,7 +36,7 @@ ActiveAdmin.register Datespot do
       row :end_date
       row :mon_open
       row :mon_close
-      row :tue_open 
+      row :tue_open
       row :tue_close
       row :wed_open
       row :wed_close
@@ -44,7 +44,7 @@ ActiveAdmin.register Datespot do
       row :thu_close 
       row :fri_open
       row :fri_close
-      row :sat_open 
+      row :sat_open
       row :sat_close
       row :sun_open
       row :sun_close

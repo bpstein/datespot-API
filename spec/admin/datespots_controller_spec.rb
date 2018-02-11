@@ -12,7 +12,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
   end
 
   describe '#index' do 
-    it 'renders the index' do 
+    it 'renders the index' do
       category = Category.create! name: 'just drinks'
       datespot = Datespot.create! name: 'Drinking Hole', 
                                   short_description: 'Nice place by river', 

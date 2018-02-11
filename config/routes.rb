@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     :path => ''
 
   resources :datespot do
-    resources :category 
+    resources :category
   end
 end
