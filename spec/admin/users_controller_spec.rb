@@ -11,7 +11,7 @@ RSpec.describe Admin::AdminUsersController, type: :controller do
     sign_in admin_user
   end
 
-  describe "#edit" do 
+  describe "#edit" do
     it 'renders the user form' do 
       get :edit, params: { id: 1 }
       expect(assigns(:admin_user)).to eq admin_user
