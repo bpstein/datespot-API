@@ -44,20 +44,20 @@ feature 'User can access the admin dashboard' do
     end
 
     it 'should allow an admin to add a datespot' do
-      # visit '/admin/datespots/new'
+      visit '/admin/datespots/new'
 
-      # fill_in 'Name', with: 'The Local'
-      # fill_in 'Short description', with: 'Not a bad joint'
-      # fill_in 'Location', with: 'South London'
-      # fill_in 'Website', with: 'www.local.co.uk'
-      # fill_in 'Price range', with: 3
+      fill_in 'Name', with: 'The Local'
+      fill_in 'Short description', with: 'Not a bad joint'
+      fill_in 'Location', with: 'South London'
+      fill_in 'Website', with: 'www.local.co.uk'
+      fill_in 'Price range', with: 3
 
-      # page.find('#datespot_start_date_input').set('2017-01-01')
-      # page.find('#datespot_end_date_input').set('2020-01-01')
+      page.find('#datespot_start_date_input').set('2017-01-01')
+      page.find('#datespot_end_date_input').set('2020-01-01')
 
-      # click_button 'Create Datespot'
+      click_button 'Create Datespot'
 
-      # expect(page).to have_content('Datespot added!')
+      expect(page).to have_content('Datespot added!')
     end
   end
 end

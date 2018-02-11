@@ -37,8 +37,8 @@ RSpec.describe Datespot, type: :model do
     create :category
   end
 
-  # it 'creates a datespot with valid input' do
-  #   create :category
-  #   expect { create :datespot }.to change { Datespot.count }.by(1)
-  # end
+  it 'creates a datespot with valid input' do
+    create :category
+    expect { create :datespot }.to change { Datespot.count }.by(1)
+  end
 end
