@@ -50,7 +50,7 @@ Devise.setup do |config|
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
-  # modifying a user and when used to authenticate or find a user. Default is :email.
+  # modifying a user and when used to authenticate or find a user.
   config.strip_whitespace_keys = [:email]
 
   # Tell if authentication through request.params is enabled. True by default.
@@ -133,9 +133,9 @@ Devise.setup do |config|
   # config.confirm_within = 3.days
 
   # If true, requires any email changes to be confirmed (exactly the same way as
-  # initial account confirmation) to be applied. Requires additional unconfirmed_email
+  # initial account confirmation) to be applied. 
   # db field (see migrations). Until confirmed, new email is stored in
-  # unconfirmed_email column, and copied to email column on successful confirmation.
+  # unconfirmed_email column, and copied to email column on confirmation.
   config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
@@ -262,9 +262,10 @@ Devise.setup do |config|
   # end
 
   # ==> Mountable engine configurations
-  # When using Devise inside an engine, let's call it `MyEngine`, and this engine
-  # is mountable, there are some extra configurations to be taken into account.
-  # The following options are available, assuming the engine is mounted as:
+  # When using Devise inside an engine, let's call it `MyEngine`, 
+  # and this engine is mountable, there are some extra configurations 
+  # to be taken into account. The following options are available, 
+  # assuming the engine is mounted as:
   #
   #     mount MyEngine, at: '/my_engine'
   #

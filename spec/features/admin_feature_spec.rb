@@ -69,9 +69,9 @@ feature 'User can add datespots' do
 
       click_button 'Create Datespot'
 
-      # visit '/admin/datespots/1'
+      visit '/admin/datespots/1'
 
-      # expect(page).to have_content('Datespot was successfully created.')
+      expect(page).to have_content('Datespot was successfully created.')
     end
   end
 end

@@ -20,7 +20,7 @@ RSpec.describe Admin::AdminUsersController, type: :controller do
 
   describe '#update' do 
     it 'updates the user' do 
-      patch :update, params: { id: 1, admin_user: { email: 'nimda@example.com' }}
+      patch :update, params: { id: 1, admin_user: { email: 'nimda@example.com' } }
       admin_user.reload 
       expect(admin_user.email).to eq 'nimda@example.com'
     end

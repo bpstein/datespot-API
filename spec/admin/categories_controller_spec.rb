@@ -8,7 +8,7 @@ RSpec.describe Admin::CategoriesController, type: :controller do
   let(:admin_user) { FactoryBot.create :admin_user }
 
   before(:each) do
-    DatabaseCleaner.clean 
+    DatabaseCleaner.clean
     sign_in admin_user
   end
 
