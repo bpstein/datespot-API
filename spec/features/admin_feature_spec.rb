@@ -63,15 +63,13 @@ feature 'User can add datespots' do
       fill_in 'Website', with: 'www.local.co.uk'
       fill_in 'Price range', with: 3
 
-      page.find_field('Category').set('first date')
-      page.find('#datespot_start_date_input').set('2017-01-01')
-      page.find('#datespot_end_date_input').set('2020-01-01')
+      select 'first date', :from => "Category"
+      select_date(Date.parse('2017-January-01'), from:'datespot_start_date')
+      select_date(Date.parse('2020-January-01'), from:'datespot_end_date')
 
       click_button 'Create Datespot'
-
-      visit '/admin/datespots/1'
-
       expect(page).to have_content('Datespot was successfully created.')
+      visit '/admin/datespots/1'
     end
   end
 end
