@@ -31,7 +31,7 @@ ActiveAdmin.register Datespot do
       row :location 
       row :price_range
       row :website
-      row :category 
+      row :category
       row :start_date
       row :end_date
       row :mon_open
@@ -53,7 +53,7 @@ ActiveAdmin.register Datespot do
 
   form :html => { :enctype => 'multipart/form-data' } do |f|
     f.inputs do
-      f.input :name 
+      f.input :name
       f.input :short_description
       f.input :long_description
       f.input :location

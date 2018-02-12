@@ -28,7 +28,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'capybara'
   gem 'codacy-coverage', require: false
-  gem 'coveralls'
+  gem 'coveralls', require: false
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'ffaker'

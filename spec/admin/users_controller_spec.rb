@@ -12,7 +12,7 @@ RSpec.describe Admin::AdminUsersController, type: :controller do
   end
 
   describe "#edit" do
-    it 'renders the user form' do 
+    it 'renders the user form' do
       get :edit, params: { id: 1 }
       expect(assigns(:admin_user)).to eq admin_user
     end

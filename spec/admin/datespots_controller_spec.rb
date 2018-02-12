@@ -42,7 +42,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
     end
   end
 
-  describe '#edit' do 
+  describe '#edit' do
     it 'renders datespot form' do 
       category = Category.create! name: 'just drinks'
       datespot = Datespot.create! name: 'Drinking Hole', 

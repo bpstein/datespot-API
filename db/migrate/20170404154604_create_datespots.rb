@@ -5,7 +5,7 @@ class CreateDatespots < ActiveRecord::Migration[5.0]
       t.text :short_description
       t.text :long_description
       t.string :location
-      t.string :website 
+      t.string :website
       t.integer :price_range
       t.date :start_date
       t.date :end_date

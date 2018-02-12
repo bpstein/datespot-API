@@ -9,7 +9,7 @@ describe 'AdminPages' do
       sign_in_admin
     end
 
-    describe "check all pages:" do
+    describe 'check all pages:' do
       all_admin_pages = Dir['app/admin/*.rb'].map { |entry| entry[/[^\/]+\.rb/][0..-4] }
       if all_admin_pages.delete('dashboards')
         it 'dashboard' do
