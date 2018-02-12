@@ -6,7 +6,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
   render_views
   let(:admin_user) { FactoryBot.create :admin_user }
 
-  before(:each) do 
+  before(:each) do
     DatabaseCleaner.clean 
     sign_in admin_user 
   end
@@ -14,7 +14,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
   describe '#index' do 
     it 'renders the index' do
       category = Category.create! name: 'just drinks'
-      datespot = Datespot.create! name: 'Drinking Hole', 
+      datespot = Datespot.create! name: 'Drinking Hole',
                                   short_description: 'Nice place by river', 
                                   long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', 
                                   location: 'Greenwich', 
@@ -108,8 +108,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
           location: 'Soho',
           price_range: 5,
           category: 'dirty dives'
-        )
-      }
+      )}
       expect(assigns(:datespot).name).to eq 'New Joint'
       expect(assigns(:datespot).short_description).to eq 'Dive Bar'
       expect(assigns(:datespot).location).to eq 'Soho'

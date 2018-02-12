@@ -9,7 +9,7 @@ class CreateDatespots < ActiveRecord::Migration[5.0]
       t.integer :price_range
       t.date :start_date
       t.date :end_date
-      t.boolean :featured, :null => false, :default => false
+      t.boolean :featured, null: false, default: false
       t.references :category, foreign_key: true
 
       t.time :mon_open

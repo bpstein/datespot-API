@@ -25,10 +25,10 @@ ActiveAdmin.register Datespot do
 
   show do |t|
     attributes_table do
-      row :name 
+      row :name
       row :short_description
       row :long_description
-      row :location 
+      row :location
       row :price_range
       row :website
       row :category
@@ -41,7 +41,7 @@ ActiveAdmin.register Datespot do
       row :wed_open
       row :wed_close
       row :thu_open
-      row :thu_close 
+      row :thu_close
       row :fri_open
       row :fri_close
       row :sat_open
@@ -51,7 +51,7 @@ ActiveAdmin.register Datespot do
     end
   end
 
-  form :html => { :enctype => 'multipart/form-data' } do |f|
+  form html: { :enctype => 'multipart/form-data' } do |f|
     f.inputs do
       f.input :name
       f.input :short_description
@@ -59,7 +59,7 @@ ActiveAdmin.register Datespot do
       f.input :location
       f.input :price_range
       f.input :website
-      f.input :category 
+      f.input :category
       f.input :start_date, include_blank: false, allow_blank: false
       f.input :end_date, include_blank: false, allow_blank: false
       f.input :mon_open, include_blank: false, allow_blank: false
@@ -75,7 +75,7 @@ ActiveAdmin.register Datespot do
       f.input :sat_open, include_blank: false, allow_blank: false
       f.input :sat_close, include_blank: false, allow_blank: false
       f.input :sun_open, include_blank: false, allow_blank: false
-      f.input :sun_close, include_blank: false, allow_blank: false  
+      f.input :sun_close, include_blank: false, allow_blank: false 
     end
     f.actions
   end
