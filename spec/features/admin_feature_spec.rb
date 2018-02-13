@@ -64,8 +64,8 @@ feature 'User can add datespots' do
       fill_in 'Price range', with: 3
 
       select 'first date', :from => "Category"
-      select_date(Date.parse('2017-January-01'), from:'datespot_start_date')
-      select_date(Date.parse('2020-January-01'), from:'datespot_end_date')
+      select_date(Date.parse('2017-January-01'), from: 'datespot_start_date')
+      select_date(Date.parse('2020-January-01'), from: 'datespot_end_date')
 
       click_button 'Create Datespot'
       expect(page).to have_content('Datespot was successfully created.')
