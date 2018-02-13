@@ -24,3 +24,4 @@ FactoryBot.define do
     sun_close '21:00'
   end
 end
+

@@ -211,7 +211,8 @@ ActiveAdmin.setup do |config|
 
   # == Menu System
   #
-  # To change the default utility navigation to show a link to your website & a logout btn
+  # To change the default utility navigation to show a link to your website &
+  # a logout btn
   #
   #   config.namespace :admin do |admin|
   #     admin.build_menu :utility_navigation do |menu|

@@ -1,7 +1,7 @@
 require 'rails_helper'
-Devise::Test::ControllerHelpers 
+Devise::Test::ControllerHelpers
 
-RSpec.describe Admin::DatespotsController, type: :controller do 
+RSpec.describe Admin::DatespotsController, type: :controller do
 
   render_views
   let(:admin_user) { FactoryBot.create :admin_user }

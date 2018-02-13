@@ -1,2 +1,3 @@
-module ApplicationHelper  
+# Default application helper
+module ApplicationHelper
 end
