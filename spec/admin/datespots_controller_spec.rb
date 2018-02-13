@@ -19,6 +19,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
                                   long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?',
                                   location: 'Greenwich',
                                   price_range: 10,
+                                  quirkiness_rating: 5,
                                   website: 'drinkinghole.com',
                                   start_date: '09 Apr 2017',
                                   end_date: '10 May 2017',
@@ -50,6 +51,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
                                   long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?',
                                   location: 'Greenwich',
                                   price_range: 10,
+                                  quirkiness_rating: 5,
                                   website: 'drinkinghole.com',
                                   start_date: '09 Apr 2017',
                                   end_date: '10 May 2017',
@@ -81,6 +83,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
                                     long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?',
                                     location: 'Greenwich',
                                     price_range: 10,
+                                    quirkiness_rating: 5,
                                     website: 'hole.com',
                                     start_date: '27 Sep 2017',
                                     end_date: '30 Dec 2018',
@@ -107,6 +110,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
           long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repudiandae distinctio quisquam tempora consectetur mollitia officia. Aliquam ratione, veritatis iste ea suscipit temporibus et est sit laborum accusantium, nihil sed.',
           location: 'Soho',
           price_range: 5,
+          quirkiness_rating: 5,
           category: 'dirty dives'
       )}
       expect(assigns(:datespot).name).to eq 'New Joint'

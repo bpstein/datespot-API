@@ -6,6 +6,7 @@ class Datespot < ActiveRecord::Base
   validates :location, presence: true
   validates :website, presence: true
   validates :price_range, presence: true, numericality: { only_integer: true }
+  validates :quirkiness_rating, presence: true, numericality: { only_integer: true }
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :category, presence: true

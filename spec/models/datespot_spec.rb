@@ -17,6 +17,8 @@ RSpec.describe Datespot, type: :model do
   it { should validate_presence_of(:location) }
   it { should validate_presence_of(:price_range) }
   it { should validate_numericality_of(:price_range) }
+  it { should validate_presence_of(:quirkiness_rating) }
+  it { should validate_numericality_of(:quirkiness_rating) }
   it { should validate_presence_of(:website) }
   it { should validate_presence_of(:start_date) }
   it { should validate_presence_of(:end_date) }

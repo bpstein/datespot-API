@@ -62,6 +62,7 @@ feature 'User can add datespots' do
       fill_in 'Location', with: 'South London'
       fill_in 'Website', with: 'www.local.co.uk'
       fill_in 'Price range', with: 3
+      fill_in 'Quirkiness rating', with: 5
 
       select 'first date', from: "Category"
       select_date(Date.parse('2017-January-01'), from: 'datespot_start_date')

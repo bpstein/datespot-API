@@ -5,6 +5,7 @@ FactoryBot.define do
     long_description 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam deserunt illum labore harum veniam aut blanditiis beatae quae nobis! Ex, at expedita error sed rerum sunt optio, porro aspernatur beatae!'
     website 'sexybar.com'
     price_range 5
+    quirkiness_rating 3
     location 'Soho'
     start_date '04 Apr 2019'
     end_date '04 Apr 2021'

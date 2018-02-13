@@ -4,6 +4,7 @@ ActiveAdmin.register Datespot do
                 :long_description,
                 :location,
                 :price_range,
+                :quirkiness_rating,
                 :category_id,
                 :website,
                 :start_date,
@@ -30,6 +31,7 @@ ActiveAdmin.register Datespot do
       row :long_description
       row :location
       row :price_range
+      row :quirkiness_rating
       row :website
       row :category
       row :start_date
@@ -58,6 +60,7 @@ ActiveAdmin.register Datespot do
       f.input :long_description
       f.input :location
       f.input :price_range
+      f.input :quirkiness_rating
       f.input :website
       f.input :category
       f.input :start_date, include_blank: false, allow_blank: false
