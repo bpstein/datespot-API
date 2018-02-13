@@ -51,7 +51,7 @@ ActiveAdmin.register Datespot do
     end
   end
 
-  form html: { :enctype => 'multipart/form-data' } do |f|
+  form html: { enctype: 'multipart/form-data' } do |f|
     f.inputs do
       f.input :name
       f.input :short_description

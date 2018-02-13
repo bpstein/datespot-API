@@ -7,7 +7,7 @@ ActiveAdmin.register Category do
     end
   end
 
-  form html: { :enctype => "multipart/form-data" } do |f|
+  form html: { enctype: "multipart/form-data" } do |f|
     f.inputs do 
       f.input :name
     end
