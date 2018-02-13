@@ -20,7 +20,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 2.7.2'
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.20'
   gem 'rails_12factor'
 end
 
