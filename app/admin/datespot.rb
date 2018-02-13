@@ -75,7 +75,7 @@ ActiveAdmin.register Datespot do
       f.input :sat_open, include_blank: false, allow_blank: false
       f.input :sat_close, include_blank: false, allow_blank: false
       f.input :sun_open, include_blank: false, allow_blank: false
-      f.input :sun_close, include_blank: false, allow_blank: false 
+      f.input :sun_close, include_blank: false, allow_blank: false
     end
     f.actions
   end

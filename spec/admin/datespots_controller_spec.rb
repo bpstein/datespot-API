@@ -7,17 +7,17 @@ RSpec.describe Admin::DatespotsController, type: :controller do
   let(:admin_user) { FactoryBot.create :admin_user }
 
   before(:each) do
-    DatabaseCleaner.clean 
-    sign_in admin_user 
+    DatabaseCleaner.clean
+    sign_in admin_user
   end
 
-  describe '#index' do 
+  describe '#index' do
     it 'renders the index' do
       category = Category.create! name: 'just drinks'
       datespot = Datespot.create! name: 'Drinking Hole',
-                                  short_description: 'Nice place by river', 
-                                  long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', 
-                                  location: 'Greenwich', 
+                                  short_description: 'Nice place by river',
+                                  long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?',
+                                  location: 'Greenwich',
                                   price_range: 10,
                                   website: 'drinkinghole.com',
                                   start_date: '09 Apr 2017',
@@ -43,13 +43,13 @@ RSpec.describe Admin::DatespotsController, type: :controller do
   end
 
   describe '#edit' do
-    it 'renders datespot form' do 
+    it 'renders datespot form' do
       category = Category.create! name: 'just drinks'
-      datespot = Datespot.create! name: 'Drinking Hole', 
-                                  short_description: 'Nice place by river', 
-                                  long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', 
-                                  location: 'Greenwich', 
-                                  price_range: 10, 
+      datespot = Datespot.create! name: 'Drinking Hole',
+                                  short_description: 'Nice place by river',
+                                  long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?',
+                                  location: 'Greenwich',
+                                  price_range: 10,
                                   website: 'drinkinghole.com',
                                   start_date: '09 Apr 2017',
                                   end_date: '10 May 2017',
@@ -73,14 +73,14 @@ RSpec.describe Admin::DatespotsController, type: :controller do
     end
   end
 
-  describe '#update' do 
-    it 'updates a datespot and relevant info' do 
+  describe '#update' do
+    it 'updates a datespot and relevant info' do
       category = Category.create! name: 'just drinks'
       @datespot = Datespot.create!  name: 'Hole in the Wall',
-                                    short_description: 'Nondescript hole', 
-                                    long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?', 
-                                    location: 'Greenwich', 
-                                    price_range: 10, 
+                                    short_description: 'Nondescript hole',
+                                    long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolorum magnam cupiditate, molestias omnis harum optio, maiores alias error libero tempore non dolore itaque nobis quam ex similique quis vero?',
+                                    location: 'Greenwich',
+                                    price_range: 10,
                                     website: 'hole.com',
                                     start_date: '27 Sep 2017',
                                     end_date: '30 Dec 2018',
@@ -101,7 +101,7 @@ RSpec.describe Admin::DatespotsController, type: :controller do
                                     sun_close: '22:00'
       patch :update, params: { id: @datespot,
         datespot: FactoryBot.attributes_for(
-          :datespot, 
+          :datespot,
           name: 'New Joint',
           short_description: 'Dive Bar',
           long_description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni repudiandae distinctio quisquam tempora consectetur mollitia officia. Aliquam ratione, veritatis iste ea suscipit temporibus et est sit laborum accusantium, nihil sed.',

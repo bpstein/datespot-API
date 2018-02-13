@@ -1,13 +1,13 @@
 require 'rails_helper'
 Devise::Test::ControllerHelpers
 
-RSpec.describe Admin::AdminUsersController, type: :controller do 
+RSpec.describe Admin::AdminUsersController, type: :controller do
 
-  render_views 
+  render_views
   let(:admin_user) { FactoryBot.create :admin_user }
 
-  before(:each) do 
-    DatabaseCleaner.clean 
+  before(:each) do
+    DatabaseCleaner.clean
     sign_in admin_user
   end
 
@@ -18,13 +18,12 @@ RSpec.describe Admin::AdminUsersController, type: :controller do
     end
   end
 
-  describe '#update' do 
-    it 'updates the user' do 
+  describe '#update' do
+    it 'updates the user' do
       patch :update, params: { id: 1, admin_user: { email: 'nimda@example.com' } }
-      admin_user.reload 
+      admin_user.reload
       expect(admin_user.email).to eq 'nimda@example.com'
     end
   end
-
 end
 

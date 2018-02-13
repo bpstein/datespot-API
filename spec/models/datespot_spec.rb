@@ -5,7 +5,7 @@ RSpec.describe Datespot, type: :model do
     DatabaseCleaner.clean
     create :category
   end
-  
+
   let(:user)     { create :user }
   let(:category) { create :category }
   let(:datespot) { create :datespot }

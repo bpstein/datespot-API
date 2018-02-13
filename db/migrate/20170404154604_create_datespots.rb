@@ -13,7 +13,7 @@ class CreateDatespots < ActiveRecord::Migration[5.0]
       t.references :category, foreign_key: true
 
       t.time :mon_open
-      t.time :mon_close 
+      t.time :mon_close
       t.time :tue_open
       t.time :tue_close
       t.time :wed_open
