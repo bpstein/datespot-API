@@ -5,8 +5,8 @@ class Datespot < ActiveRecord::Base
   validates :short_description, presence: true, length: { maximum: 500 }
   validates :location, presence: true
   validates :website, presence: true
-  validates :price_range, presence: true, numericality: { only_integer: true }
-  validates :quirkiness_rating, presence: true, numericality: { only_integer: true }
+  validates :price_range, presence: true, numericality: { only_integer: true }, length: { maximum: 10 }
+  validates :quirkiness_rating, presence: true, numericality: { only_integer: true }, length: { maximum: 10 }
   validates :start_date, presence: true
   validates :end_date, presence: true
   validates :category, presence: true

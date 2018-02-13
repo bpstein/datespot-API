@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20180213140632) do
     t.integer 'price_range'
     t.date 'start_date'
     t.date 'end_date'
-    t.boolean 'featured', default: false, null: false
+    t.boolean 'featured'
     t.integer 'category_id'
     t.time 'mon_open'
     t.time 'mon_close'
