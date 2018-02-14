@@ -1,5 +1,6 @@
 ActiveAdmin.register Datespot do
   permit_params :name,
+                :image,
                 :short_description,
                 :long_description,
                 :location,
@@ -27,6 +28,7 @@ ActiveAdmin.register Datespot do
   show do |t|
     attributes_table do
       row :name
+      row :image
       row :short_description
       row :long_description
       row :location
@@ -56,6 +58,7 @@ ActiveAdmin.register Datespot do
   form html: { enctype: 'multipart/form-data' } do |f|
     f.inputs do
       f.input :name
+      f.input :image, required: true, as: :file
       f.input :short_description
       f.input :long_description
       f.input :location
