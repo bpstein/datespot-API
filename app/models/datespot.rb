@@ -26,7 +26,7 @@ class Datespot < ActiveRecord::Base
   validates :sun_open, presence: true
   validates :sun_close, presence: true
 
-  has_attached_file :image
+  has_attached_file :image, styles: { medium: '680x300>', thumb: '170x100>' }
   validates_uniqueness_of :image_file_name
-  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end
