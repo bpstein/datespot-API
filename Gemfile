@@ -7,6 +7,7 @@ end
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
+gem 'aws-sdk', '< 3.0'
 gem 'coffee-rails'
 gem 'devise'
 gem 'figaro'
@@ -19,6 +20,7 @@ gem 'rails'
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 2.7.2'
+gem 's3_direct_upload'
 
 group :production do
   gem 'pg', '~> 0.20'
