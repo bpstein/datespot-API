@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :client do
-    source_app 'datespot'
+    source_app 'source_app'
   end
 end

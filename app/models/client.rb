@@ -1,5 +1,5 @@
 class Client < ActiveRecord::Base
-  has_many :notifications, foreign_key: 'datespot', primary_key: 'datespot'
+  has_many :notifications, foreign_key: 'source_app', primary_key: 'source_app'
   validates_presence_of :api_key
   validates_uniqueness_of :api_key
   before_validation :set_api_key
