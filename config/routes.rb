@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   resources :datespot do
     resources :category
   end
+
+  constraints subdomain: 'api' do 
+    namespace :api, path: '/' do
+      resources :datespots
+    end
+  end
 end
