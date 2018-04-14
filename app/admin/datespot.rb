@@ -4,6 +4,8 @@ ActiveAdmin.register Datespot do
                 :short_description,
                 :long_description,
                 :location,
+                :latitude,
+                :longitude,
                 :price_range,
                 :quirkiness_rating,
                 :category_id,
@@ -32,6 +34,8 @@ ActiveAdmin.register Datespot do
       row :short_description
       row :long_description
       row :location
+      row :latitude
+      row :longitude
       row :price_range
       row :quirkiness_rating
       row :website
@@ -61,7 +65,7 @@ ActiveAdmin.register Datespot do
       f.input :image, required: true, as: :file
       f.input :short_description
       f.input :long_description
-      f.input :location
+      f.input :location, include_blank: false, allow_blank: false
       f.input :price_range
       f.input :quirkiness_rating
       f.input :website

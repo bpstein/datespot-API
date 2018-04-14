@@ -29,4 +29,7 @@ class Datespot < ActiveRecord::Base
   has_attached_file :image, styles: { medium: '680x300>', thumb: '170x100>' }
   validates_uniqueness_of :image_file_name
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+  geocoded_by :location
+  after_validation :geocode
 end
