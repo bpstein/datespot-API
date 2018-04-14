@@ -21,6 +21,7 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 2.7.2'
 gem 's3_direct_upload'
+gem 'geocoder'
 
 group :production do
   gem 'pg', '~> 0.20'
