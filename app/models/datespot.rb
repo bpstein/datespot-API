@@ -1,5 +1,9 @@
 # Datespot class
 class Datespot < ActiveRecord::Base
+  # Default Range in miles
+  # to search near by locations
+  IN_RANGE = 50
+
   belongs_to :category
   validates :name, presence: true
   validates :short_description, presence: true, length: { maximum: 500 }
@@ -32,4 +36,20 @@ class Datespot < ActiveRecord::Base
 
   geocoded_by :location
   after_validation :geocode
+
+  def self.search_datespots(location)
+    datespots = if location
+      # Near by location (text or array of lat,long) within 50 miles
+      # default order by distance
+      bot_format_data Datespot.near(location, IN_RANGE)
+    else
+      bot_format_data Datespot.all
+    end
+  end
+
+  def self.bot_format_data datespots
+    datespots.map do |d|
+      d.as_json.merge(:image_url => d.image(:thumb))
+    end
+  end
 end
