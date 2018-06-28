@@ -37,6 +37,14 @@ class Datespot < ActiveRecord::Base
   geocoded_by :location
   after_validation :geocode
 
+  def image_url(style=:medium)
+    if Rails.env.production?
+      URI.join(image.s3_bucket.url, image.style_name_as_path(style)).to_s
+    else
+      image(style)
+    end
+  end
+
   def self.search_datespots(location)
     datespots = if location
       # Near by location (text or array of lat,long) within 50 miles
@@ -49,7 +57,7 @@ class Datespot < ActiveRecord::Base
 
   def self.bot_format_data datespots
     datespots.map do |d|
-      d.as_json.merge(:image_url => d.image(:thumb))
+      d.as_json.merge(:image_url => d.image_url)
     end
   end
 end
