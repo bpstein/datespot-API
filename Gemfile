@@ -7,7 +7,7 @@ end
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'activemodel-serializers-xml', github: 'rails/activemodel-serializers-xml'
-gem 'aws-sdk', '< 3.0'
+gem 'aws-sdk'
 gem 'coffee-rails'
 gem 'devise'
 gem 'figaro'
